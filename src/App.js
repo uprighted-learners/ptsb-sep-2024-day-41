@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function App() {
+export default function App(props) {
+    const { greeting } = props
     return (
-        <div>HELLLO from App.js!</div>
+        <div>{greeting} from App.js!</div>
     )
 }

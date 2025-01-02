@@ -7,6 +7,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <div>
-        <App />
+        <App greeting="salutations" />
     </div>
 );
