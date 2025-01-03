@@ -1,5 +1,13 @@
 import React, { useState } from 'react'
 
+const Welcome = () => {
+    return <h1>Welcome to React!</h1>
+}
+
+const Goodbye = () => {
+    return <h1>Goodbye from React!</h1>
+}
+
 export default function Salutations(props) {
     const { greeting } = props.values
 
@@ -10,6 +18,21 @@ export default function Salutations(props) {
         e.preventDefault()
         setLocation(inputValue)
     }
+
+    {/* IF / ELSE STATEMENT EXAMPLE: */ }
+    // if (greeting === "hi") {
+    //     return (
+    //         <div>
+    //             <p>hello from this if else statement</p>
+    //         </div>
+    //     )
+    // } else {
+    //     return (
+    //         <div>
+    //             <p>goodbye from this if else statement</p>
+    //         </div>
+    //     )
+    // }
 
     return (
         <div>
@@ -23,6 +46,12 @@ export default function Salutations(props) {
                 />
                 <button type='button' onClick={handleSubmit}>Submit</button>
             </form>
+
+            {/* TERNARY STATEMENT EXAMPLE: */}
+            {location === "admin" && greeting === "sky" ? <Welcome /> : <Goodbye />}
+
+            {/* CIRCUIT BREAKER EXAMPLE: */}
+            {!greeting === "hello" && <p>Welcome User!</p>}
         </div>
     )
 }
