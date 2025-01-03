@@ -1,8 +1,11 @@
 import React from 'react'
 
+import Salutations from './components/Salutations'
+
 export default function App(props) {
-    const { greeting } = props
     return (
-        <div>{greeting} from App.js!</div>
+        <div>
+            <Salutations values={props} />
+        </div>
     )
 }
